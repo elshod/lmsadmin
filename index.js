@@ -83,6 +83,7 @@ app.use('/auth',authRouter)
 app.use('/api',apiRouter)
 app.use('/product',productRouter) 
 app.use('/category',categoryRouter)
+app.use('/faq',require('./router/faq'))
 app.use('/blog',require('./router/blog'))
 app.use(pageRouter)
 

@@ -89,7 +89,7 @@ router.get('/getbytype/:id',async(req,res)=>{
 })
 
 router.get('/getall',async(req,res)=>{
-    let blogs = await Blog.find().lean()
+    let blogs = await Blog.find().sort({_id:-1}).lean()
     res.send(blogs)
 })
 

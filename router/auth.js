@@ -13,16 +13,11 @@ router.get('/logout', (req, res) => {
     })
 })
 
-
 router.post('/login', async(req, res) =>{
     if (req.body) {
         let {username, password} = req.body
-
-
         if(username == 'admin' && password == '123'){
-        
         req.session.isAuthed = true
-
         res.redirect('/admin')
         } else{
             res.redirect('/')

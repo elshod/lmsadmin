@@ -4,7 +4,6 @@ const Category = require('../modeles/category')
 const Product = require('../modeles/product')
 const auth = require('../middleware/auth')
 const admin = require('../middleware/admin')
-const Ads = require('../modeles/ads')
 router.get('/',auth,async(req,res)=>{
     const category = await Category.find().lean()
         res.render('category/index',{
